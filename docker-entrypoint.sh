@@ -84,6 +84,7 @@ ffmpeg -rtsp_transport tcp \
     -f segment \
     -segment_time "$VIDEO_SEGMENT_TIME" \
     -segment_atclocktime 1 \
+    -reset_timestamps 1 \
     -strftime 1 \
     "$dir"/%Y-%m-%d_%H-%M-%S."$fileExtension" \
     -loglevel panic
